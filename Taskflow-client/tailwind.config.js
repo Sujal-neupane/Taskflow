@@ -19,6 +19,12 @@ export default {
         red:    { task:'#e85555' },
         blue:   { task:'#5588ff' },
       },
+      fontWeight: {
+        medium:    '500',
+        semibold:  '600',
+        bold:      '700',
+        extrabold: '800',
+      },
       animation: {
         'slide-in': 'slideIn 0.4s cubic-bezier(0.16,1,0.3,1) both',
         'fade-up':  'fadeUp 0.5s ease both',
