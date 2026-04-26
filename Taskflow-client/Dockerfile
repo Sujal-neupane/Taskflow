@@ -1,7 +1,7 @@
 # ── Stage 1: Build ────────────────────────────────────────
 FROM node:20-alpine AS builder
 
-WORKDIR /app
+WORKDIR /Taskflow-client
 
 # Build args for Vite (public keys, safe to use as build args)
 # hadolint ignore=DL3040
