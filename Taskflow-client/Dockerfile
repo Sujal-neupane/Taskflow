@@ -13,8 +13,10 @@ ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL \
     VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY \
     VITE_API_URL=$VITE_API_URL
 
-COPY package*.json ./
+COPY Taskflow-client/package*.json ./
 RUN npm install
+
+COPY Taskflow-client .
 
 COPY . .
 RUN npm run build
