@@ -1,0 +1,5 @@
+github_username      = "Sujal-neupane"
+image_tag            = "latest"
+supabase_url         = "https://apcekgjxpgmoqklkxlke.supabase.co"
+supabase_service_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwY2VrZ2p4cGdtb3FrbGt4bGtlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NzA4Njc4MiwiZXhwIjoyMDkyNjYyNzgyfQ.UGBTjcTLOWNeVTopHRxj4g0krCYreeWerqeyG0EMSwY"
+supabase_jwt_secret  = "qK0CK9LnKg6GGLqCZufWcGwIlLE41gjTZtmeCVg+AsnjsmwP7kj8saOrsFJmJQLGobCIgc8qlRybw2iOuzWupQ=="
