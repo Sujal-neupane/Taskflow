@@ -1,10 +1,11 @@
 version: '3.8'
 
 services:
-  client:
+  taskflow-client:
     build:
       context: ./Taskflow-client
       dockerfile: Dockerfile
+    image: taskflow-client:latest
     ports:
       - "3000:80"
     depends_on:
