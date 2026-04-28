@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  backend:
+    image: ghcr.io/Sujal-neupane/taskflow-backend:latest
+    container_name: taskflow-api
+    restart: always
+    expose:
+      - '4000'
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET}
+      - CORS_ORIGIN=http://localhost
+    networks:
+      - taskflow-net
+
+  frontend:
+    image: ghcr.io/Sujal-neupane/taskflow-frontend:latest
+    container_name: taskflow-web
+    restart: always
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+    networks:
+      - taskflow-net
+
+networks:
+  taskflow-net:
+    driver: bridge
