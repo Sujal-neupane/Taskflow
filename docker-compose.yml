@@ -2,14 +2,18 @@ version: '3.8'
 
 services:
   client:
-    build: ./Taskflow-client
+    build:
+      context: ./Taskflow-client
+      dockerfile: Dockerfile
     ports:
       - "3000:80"
     depends_on:
       - api
 
   api:
-    build: ./Taskflow-server
+    build:
+      context: ./Taskflow-server
+      dockerfile: Dockerfile
     container_name: taskflow-api
     ports:
       - "5000:5000"
