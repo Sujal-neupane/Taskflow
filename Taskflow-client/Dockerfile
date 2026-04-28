@@ -1,7 +1,7 @@
 # ── Stage 1: Build ────────────────────────────────────────
 FROM node:20-alpine AS builder
 
-WORKDIR /app
+WORKDIR /Taskflow-client
 
 ARG VITE_SUPABASE_URL
 ARG VITE_SUPABASE_ANON_KEY
@@ -14,14 +14,14 @@ ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL \
 COPY package*.json ./
 RUN npm install
 
-COPY . .   # ✅ THIS ONLY
+COPY . .   
 
 RUN npm run build
 
 # ── Stage 2: Serve with Nginx ─────────────────────────────
 FROM nginx:1.25-alpine
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /Taskflow-client/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
